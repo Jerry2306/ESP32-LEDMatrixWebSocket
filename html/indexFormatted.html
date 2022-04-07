@@ -99,10 +99,10 @@
         let editBoxes = [];
         let liveBoxes = [];
 
-        initWebSocket()
+        initWebSocket();
         function initWebSocket() {
-            //websock = new WebSocket('ws://' + window.location.hostname + ':8080/');
-            websocket = new WebSocket('ws://localhost:8080/');
+            websocket = new WebSocket('ws://' + window.location.hostname + ':81/');
+            //websocket = new WebSocket('ws://localhost:8080/');
             websocket.onmessage = function (evt) {
                 try {
                     var reader = new FileReader();
@@ -242,7 +242,6 @@
         colorPicker.addEventListener('input', () => {
             colorPicker.style.backgroundColor = colorPicker.value;
         });
-    </script>
     </script>
 </body>
 
